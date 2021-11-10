@@ -1,5 +1,5 @@
 {
-  "name": "ToDoList",
+  "name": "Leaderboard_app",
   "jest": {
     "setupFiles": [
       "./src/tests/globalHTMLmock.js"
