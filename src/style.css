@@ -28,13 +28,24 @@ ol {
 .leaderboard-title {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   margin: 5px 10px -10px 10px;
+}
+
+.leaderboard-title-inner {
+  display: flex;
+  align-items: center;
 }
 
 .icon {
   font-size: 30px;
   color: #fa6855;
+}
+
+.icon-refresh {
+  font-size: 25px;
+  color: lightgray;
+  cursor: pointer;
 }
 
 .app_container {
