@@ -1,7 +1,8 @@
 const postNewScore = async () => {
   const score = document.getElementById('scoreInput');
   const name = document.getElementById('nameInput');
-
+  const error = document.getElementById('ErrorMessage');
+  error.style.display = 'none';
   if (name.value.length && score.value.length) {
     try {
       await fetch(
@@ -23,7 +24,7 @@ const postNewScore = async () => {
       console.log(err);
     }
   } else {
-    alert('no');
+    error.style.display = 'block';
   }
 };
 
