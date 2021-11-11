@@ -13,11 +13,16 @@
 
       <div class="score-leaderboard">
         <div class="leaderboard-title">
-          
-          <ion-icon name="game-controller-outline" class="icon"></ion-icon>
-          <h1>
-            Recent scores
-          </h1>
+          <div class="leaderboard-title-inner">
+            <ion-icon name="game-controller-outline" class="icon"></ion-icon>
+            <h1>
+              Recent scores
+            </h1>
+          </div>
+
+          <div>
+            <ion-icon name="refresh-circle-sharp" class="icon-refresh" id="refreshButton"></ion-icon>
+          </div>
         </div>
       <div>
 
@@ -30,10 +35,11 @@
       <div>
         <div class="inputWrapper">
           <div class="form-wrapper">
-            <form class="form-class">
-              <input type="text" id="name" placeholder="Your name">
-              <input type="text" id="score"  placeholder="Your score">
-              <button type="submit" form="pwgen-form"  id="generatebutton">Submit </button>
+            <form class="form-class" method="post">
+              <input  id="nameInput" required placeholder="Your name">
+              <input type="number" id="scoreInput" required placeholder="Your score">
+              <button type="submit" form="pwgen-form" id="submitButton">Submit </button>
+              <h6 class="ErrorMessage" id="ErrorMessage">Error: Cannot submit empty information!</h6>
             </form>
           </div>
         </div>

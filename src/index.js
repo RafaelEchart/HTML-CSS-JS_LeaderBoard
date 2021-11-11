@@ -1,11 +1,13 @@
 import './style.css';
-import scoreList from './memory';
+import postNewScore from './postNewScore';
+import getScores from './getScores';
 
-window.onload = () => {
-  scoreList.currentTasks.forEach((score) => {
-    document.getElementById('scoreList').innerHTML += `<li>
-        <mark>${score.name}</mark>
-        <small>${score.score}</small>
-      </li>`;
-  });
+window.onload = async () => {
+  const submitButton = document.getElementById('submitButton');
+  const refreshButton = document.getElementById('refreshButton');
+
+  getScores();
+
+  submitButton.addEventListener('click', postNewScore);
+  refreshButton.addEventListener('click', getScores);
 };

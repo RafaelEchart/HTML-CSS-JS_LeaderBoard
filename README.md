@@ -2,10 +2,13 @@
 
 # Leaderboard app
 
-> in this project is in process. 
+> This project is connected with an API that provides us the posibility to save new scores and read the saved scores.  
+> To add a new score, fill your name and your score and click submit. 
+> To see the updated scores just click the refresh button or refresh the page.  
 
 
-<!-- ![screenshot](./src/README/app_screenshot.png) -->
+
+![screenshot](./src/README/app_screenshot.png)
 
 ## Built With
 
@@ -14,9 +17,9 @@
 - Webpack and Webpack-dev-server
 - Linters: Stylelint and Eslint
 
-<!-- ## Live Demo
+## Live Demo
 
-[Live Demo Link](https://rafaelechart.github.io/ToDoList/dist)
+[Live Demo Link](https://rafaelechart.github.io/Leaderboard/dist/)
 
 
 ## Getting Started
@@ -32,8 +35,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- git clone https://github.com/RafaelEchart/ToDoList.git
-- cd ToDoList
+- git clone https://github.com/RafaelEchart/Leaderboard.git
+- cd Leaderboard
 
 ### Install
 
@@ -65,7 +68,7 @@ This will allow you to see a hot refresh in the browser when your HTML changes.
 
 ### Merge
 
-- Merge it with your main branch so we can all see your work!!🤝 -->
+- Merge it with your main branch so we can all see your work!!🤝
 
 
 ## Authors
@@ -75,7 +78,7 @@ This will allow you to see a hot refresh in the browser when your HTML changes.
 - GitHub: [@rafaelechart](https://github.com/rafaelechart)
 - Twitter: [@rafaechart](https://twitter.com/rafaechart)
 
-<!-- 
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -88,7 +91,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Rafael Echart⭐️
-- Microverse documentation ⭐️ -->
+- Microverse documentation ⭐️
 
 ## 📝 License
 
