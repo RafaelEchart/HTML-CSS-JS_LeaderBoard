@@ -26,6 +26,10 @@ const getScores = async () => {
   }
 
   if (leaderboardScores.result.length) {
+    leaderboardScores.result.sort((a, b) => {
+      return b.score - a.score;
+  });
+
     loading.style.display = 'none';
     leaderboardScores.result.forEach((score) => {
       scoreListContainer.innerHTML += `<li>
