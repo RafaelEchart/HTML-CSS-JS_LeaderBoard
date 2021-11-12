@@ -1,15 +1,11 @@
-
 const getScores = async () => {
   let leaderboardScores;
   let leaderboardAPIrequest;
   const scoreListContainer = document.getElementById('scoreList');
   scoreListContainer.innerHTML = '';
 
-  
   const loading = document.getElementById('loading');
-  loading.style.display = 'flex'
-  
-
+  loading.style.display = 'flex';
 
   try {
     leaderboardAPIrequest = await fetch(
@@ -28,15 +24,13 @@ const getScores = async () => {
   }
 
   if (leaderboardScores.result.length) {
-    
-    loading.style.display = 'none'
+    loading.style.display = 'none';
     leaderboardScores.result.forEach((score) => {
       scoreListContainer.innerHTML += `<li>
           <mark>${score.user}</mark>
           <small>${score.score}</small>
         </li>`;
     });
-
   } else {
     scoreListContainer.innerHTML += "<h5 style='text-align: center; text-decoration: underline; cursor: wait'>Please add a score</h5>";
   }

@@ -35,11 +35,11 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            
-          }
-        ]
+
+          },
+        ],
       },
-      
+
     ],
   },
 };
