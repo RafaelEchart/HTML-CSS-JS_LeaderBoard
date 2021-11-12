@@ -392,7 +392,7 @@ ol {
   justify-content: center;
   align-items: center;
   width: 360px;
-  height: 260px;
+  height: 283px;
   opacity: 0.5;
   background-color: #373d4a;
   z-index: 99;
@@ -452,4 +452,21 @@ ol {
 
 .notDisplay {
   display: none;
+}
+
+.auto-refresh {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.auto-refresh label {
+  color: black;
+  font-size: 12px;
+}
+.auto-refresh input {
+  padding: 0;
+  margin: 0;
+  width: 25px;
 }

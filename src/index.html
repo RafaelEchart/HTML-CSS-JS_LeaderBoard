@@ -42,19 +42,33 @@
               <div class="loader">Loading...</div>
             </div>
             <form class="form-class" method="post">
-              <input id="nameInput" required placeholder="Your name" />
+              <input
+                id="nameInput"
+                required
+                placeholder="Your name"
+                maxlength="15"
+              />
               <input
                 type="number"
                 id="scoreInput"
                 required
                 placeholder="Your score"
+                
+                
               />
               <button type="submit" form="pwgen-form" id="submitButton">
                 Submit
               </button>
-              <h6 class="ErrorMessage" id="ErrorMessage">
-                Error: Cannot submit empty information!
-              </h6>
+              <div class="auto-refresh">
+                <input type="checkbox" id="auto-refresh" name="auto-refresh" />
+                <label for="auto-refresh">Auto Refresh</label>
+              </div>
+              <div class="errorContainer">
+
+                <h6 class="ErrorMessage" id="ErrorMessage">
+                  Error: Cannot submit empty information!
+                </h6>
+              </div>
             </form>
           </div>
         </div>

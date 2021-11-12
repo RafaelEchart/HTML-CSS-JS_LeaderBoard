@@ -1,13 +1,20 @@
+import getScores from './getScores';
+
 const postNewScore = async () => {
-  const score = document.getElementById('scoreInput');
+  let scoreInput = document.getElementById('scoreInput');
+  let score = scoreInput.value;
+
   const name = document.getElementById('nameInput');
+  const refresh = document.getElementById('auto-refresh');
 
   const loading = document.getElementById('loading-form');
-
+  
   const error = document.getElementById('ErrorMessage');
   error.style.display = 'none';
+  
+  if (score.length > 9) {score = score.slice(0, 8)}
 
-  if (name.value.length && score.value.length) {
+  if (name.value.length && score.length) {
     try {
       loading.style.display = 'flex';
       await fetch(
@@ -19,19 +26,27 @@ const postNewScore = async () => {
           },
           body: JSON.stringify({
             user: name.value,
-            score: score.value,
+            score,
           }),
         },
       );
-      score.value = '';
+      scoreInput.value = '';
       name.value = '';
-      loading.style.display = 'none';
     } catch (err) {
       console.log(err);
     }
   } else {
     error.style.display = 'block';
   }
+  
+  if(refresh.checked){
+    getScores()
+  }
+
+  loading.style.display = 'none';
+
+
+
 };
 
 export default postNewScore;
