@@ -55,6 +55,13 @@ const postNewScore = async () => {
     }
   } else {
     error.style.display = 'block';
+    const notyf = new Notyf({
+      position: {
+        x: 'right',
+        y: 'top',
+      },
+    });
+    notyf.error('Error: Check your inputs');
   }
 
   loading.style.display = 'none';
