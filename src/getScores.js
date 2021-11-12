@@ -2,6 +2,8 @@ const getScores = async () => {
   let leaderboardScores;
   let leaderboardAPIrequest;
   const scoreListContainer = document.getElementById('scoreList');
+  const refreshButton = document.getElementById('refreshButton');
+  refreshButton.style.visibility = 'hidden'
   scoreListContainer.innerHTML = '';
 
   const loading = document.getElementById('loading');
@@ -34,6 +36,7 @@ const getScores = async () => {
   } else {
     scoreListContainer.innerHTML += "<h5 style='text-align: center; text-decoration: underline; cursor: wait'>Please add a score</h5>";
   }
+  refreshButton.style.visibility = 'visible'
 };
 
 export default getScores;
