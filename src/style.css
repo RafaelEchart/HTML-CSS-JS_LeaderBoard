@@ -386,6 +386,20 @@ ol {
   z-index: 99;
 }
 
+.loading-form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 260px;
+  opacity: 0.5;
+  background-color: #373D4A;
+  z-index: 99;
+  border-radius: 10px;
+  
+}
+
 .loading-image {
   z-index: 100;
 }
@@ -435,4 +449,8 @@ ol {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.notDisplay {
+  display: none;
 }
