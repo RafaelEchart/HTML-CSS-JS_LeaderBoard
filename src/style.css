@@ -317,6 +317,12 @@ ol {
   font-size: 14px;
 }
 
+.auto-refresh input {
+  padding: 0;
+  margin: 0;
+  width: 25px;
+}
+
 .form-wrapper input:hover {
   background: #f7f7f7;
 }
@@ -464,9 +470,4 @@ ol {
 .auto-refresh label {
   color: black;
   font-size: 12px;
-}
-.auto-refresh input {
-  padding: 0;
-  margin: 0;
-  width: 25px;
 }

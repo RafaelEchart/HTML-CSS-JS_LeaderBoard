@@ -1,9 +1,11 @@
+import { Notyf } from 'notyf';
+
 const getScores = async () => {
   let leaderboardScores;
   let leaderboardAPIrequest;
   const scoreListContainer = document.getElementById('scoreList');
   const refreshButton = document.getElementById('refreshButton');
-  refreshButton.style.visibility = 'hidden'
+  refreshButton.style.visibility = 'hidden';
   scoreListContainer.innerHTML = '';
 
   const loading = document.getElementById('loading');
@@ -26,9 +28,7 @@ const getScores = async () => {
   }
 
   if (leaderboardScores.result.length) {
-    leaderboardScores.result.sort((a, b) => {
-      return b.score - a.score;
-  });
+    leaderboardScores.result.sort((a, b) => b.score - a.score);
 
     loading.style.display = 'none';
     leaderboardScores.result.forEach((score) => {
@@ -40,13 +40,23 @@ const getScores = async () => {
   } else {
     scoreListContainer.innerHTML += "<h5 style='text-align: center; text-decoration: underline; cursor: wait'>Please add a score</h5>";
   }
-  refreshButton.style.visibility = 'visible'
-  
-  alertia({
-    msg: "List updated",
-    time: "2000"
-
-  });
+  refreshButton.style.visibility = 'visible';
+  console.log(document.readyState);
+  if (document.readyState === 'complete') {
+    const notyf = new Notyf({
+      position: {
+        x: 'right',
+        y: 'top',
+      },
+      types: [
+        {
+          type: 'success',
+          background: '#8AC7DB',
+        },
+      ],
+    });
+    notyf.success('Leaderboard updated!');
+  }
 };
 
 export default getScores;

@@ -1,18 +1,19 @@
+import { Notyf } from 'notyf';
 import getScores from './getScores';
 
 const postNewScore = async () => {
-  let scoreInput = document.getElementById('scoreInput');
+  const scoreInput = document.getElementById('scoreInput');
   let score = scoreInput.value;
 
   const name = document.getElementById('nameInput');
   const refresh = document.getElementById('auto-refresh');
 
   const loading = document.getElementById('loading-form');
-  
+
   const error = document.getElementById('ErrorMessage');
   error.style.display = 'none';
-  
-  if (score.length > 9) {score = score.slice(0, 8)}
+
+  if (score.length > 9) { score = score.slice(0, 8); }
 
   if (name.value.length && score.length) {
     try {
@@ -32,21 +33,25 @@ const postNewScore = async () => {
       );
       scoreInput.value = '';
       name.value = '';
+      const notyf = new Notyf({
+        position: {
+          x: 'right',
+          y: 'top',
+        },
+      });
+      notyf.success({ message: 'New Score Added!', duration: 3000 });
+
+      if (refresh.checked) {
+        getScores();
+      }
     } catch (err) {
       console.log(err);
     }
   } else {
     error.style.display = 'block';
   }
-  
-  if(refresh.checked){
-    getScores()
-  }
 
   loading.style.display = 'none';
-
-
-
 };
 
 export default postNewScore;
