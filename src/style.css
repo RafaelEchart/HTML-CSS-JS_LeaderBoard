@@ -394,10 +394,9 @@ ol {
   width: 360px;
   height: 260px;
   opacity: 0.5;
-  background-color: #373D4A;
+  background-color: #373d4a;
   z-index: 99;
   border-radius: 10px;
-  
 }
 
 .loading-image {

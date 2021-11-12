@@ -3,14 +3,11 @@ const postNewScore = async () => {
   const name = document.getElementById('nameInput');
 
   const loading = document.getElementById('loading-form');
- 
 
   const error = document.getElementById('ErrorMessage');
   error.style.display = 'none';
 
-
   if (name.value.length && score.value.length) {
-
     try {
       loading.style.display = 'flex';
       await fetch(
@@ -29,7 +26,6 @@ const postNewScore = async () => {
       score.value = '';
       name.value = '';
       loading.style.display = 'none';
-
     } catch (err) {
       console.log(err);
     }
