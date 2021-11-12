@@ -41,6 +41,12 @@ const getScores = async () => {
     scoreListContainer.innerHTML += "<h5 style='text-align: center; text-decoration: underline; cursor: wait'>Please add a score</h5>";
   }
   refreshButton.style.visibility = 'visible'
+  
+  alertia({
+    msg: "List updated",
+    time: "2000"
+
+  });
 };
 
 export default getScores;
