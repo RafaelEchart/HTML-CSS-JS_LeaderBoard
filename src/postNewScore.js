@@ -19,7 +19,7 @@ const postNewScore = async () => {
     try {
       loading.style.display = 'flex';
       await fetch(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/afMNT2NsfBzm4rDRXx1A/scores/',
+        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dMg2ekytUZGHf60kEMby/scores/',
         {
           method: 'POST',
           headers: {
