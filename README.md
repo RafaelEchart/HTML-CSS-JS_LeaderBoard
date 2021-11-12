@@ -2,18 +2,17 @@
 
 # Leaderboard app
 
-> This project is connected with an API that provides us the posibility to save new scores and read the saved scores.  
-> To add a new score, fill your name and your score and click submit. 
-> To see the updated scores just click the refresh button or refresh the page.  
+> This project is connected with an API that provides us the posibility to save new scores and read the saved scores. Good looking UI with little design details such as notifications and loading spinners for user feedback.
+  
 
 
-
-![screenshot](./src/README/app_screenshot.png)
+![screenshot](./src/README/app_screenshot.gif)
 
 ## Built With
 
 - HTML & CSS & Javascript
 - [API: Leaderboard](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
+- [Notfy.js](https://www.npmjs.com/package/notyf)
 - Webpack and Webpack-dev-server
 - Linters: Stylelint and Eslint
 

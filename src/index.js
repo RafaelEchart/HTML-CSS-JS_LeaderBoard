@@ -1,4 +1,6 @@
 import './style.css';
+
+import 'notyf/notyf.min.css';
 import postNewScore from './postNewScore';
 import getScores from './getScores';
 

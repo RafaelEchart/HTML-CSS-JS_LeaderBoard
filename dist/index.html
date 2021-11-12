@@ -5,57 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
     <title>Leaderboard app</title>
   <script defer src="index.bundle.js"></script></head>
   <body>
     <h1 class="main_title">Leaderboard app</h1>
-    <section class="app_container" >
-
-      <div class="score-leaderboard">
+    <section class="app_container loading-spinner">
+      <div class="score-leaderboard loading-spinner-inside">
         <div class="leaderboard-title">
           <div class="leaderboard-title-inner">
             <ion-icon name="game-controller-outline" class="icon"></ion-icon>
-            <h1>
-              Recent scores
-            </h1>
+            <h1>Recent scores</h1>
           </div>
 
           <div>
-            <ion-icon name="refresh-circle-sharp" class="icon-refresh" id="refreshButton"></ion-icon>
+            <ion-icon
+              name="refresh-circle-sharp"
+              class="icon-refresh"
+              id="refreshButton"
+            ></ion-icon>
           </div>
         </div>
-      <div>
-
-        <ol id="scoreList">
-          
-        </ol>
-      </div>
+        <div class="initialScoreContainer">
+          <div class="insideScoreContainer">
+            <div id="loading" class="loading">
+              <div class="loader">Loading...</div>
+            </div>
+            <ol id="scoreList" class="scoreListContainer"></ol>
+          </div>
+        </div>
       </div>
 
       <div>
         <div class="inputWrapper">
           <div class="form-wrapper">
+            <div id="loading-form" class="loading-form notDisplay">
+              <div class="loader">Loading...</div>
+            </div>
             <form class="form-class" method="post">
-              <input  id="nameInput" required placeholder="Your name">
-              <input type="number" id="scoreInput" required placeholder="Your score">
-              <button type="submit" form="pwgen-form" id="submitButton">Submit </button>
-              <h6 class="ErrorMessage" id="ErrorMessage">Error: Cannot submit empty information!</h6>
+              <input
+                id="nameInput"
+                required
+                placeholder="Your name"
+                maxlength="15"
+              />
+              <input
+                type="number"
+                id="scoreInput"
+                required
+                placeholder="Your score"
+                
+                
+              />
+              <button type="submit" form="pwgen-form" id="submitButton">
+                Submit
+              </button>
+              <div class="auto-refresh">
+                <input type="checkbox" id="auto-refresh" name="auto-refresh" />
+                <label for="auto-refresh">Auto Refresh</label>
+              </div>
+              <div class="errorContainer">
+
+                <h6 class="ErrorMessage" id="ErrorMessage">
+                  Error: Cannot submit empty information!
+                </h6>
+              </div>
             </form>
           </div>
         </div>
       </div>
-      
     </section>
     
-    
-    
+    <script src="https://cdn.jsdelivr.net/gh/abhiprojectz/alertia/dist/alertia.js"></script>
+
     <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-  ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
