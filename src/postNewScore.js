@@ -45,7 +45,13 @@ const postNewScore = async () => {
         getScores();
       }
     } catch (err) {
-      console.log(err);
+      const notyf = new Notyf({
+        position: {
+          x: 'right',
+          y: 'top',
+        },
+      });
+      notyf.error('Error, Plese try again...');
     }
   } else {
     error.style.display = 'block';

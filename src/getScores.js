@@ -24,7 +24,14 @@ const getScores = async () => {
 
     leaderboardScores = await leaderboardAPIrequest.json();
   } catch (err) {
-    console.log('Error from initial petition: Check console.');
+    const notyf = new Notyf({
+      position: {
+        x: 'right',
+        y: 'top',
+      },
+    });
+    notyf.error('Error, Plese try again...');
+    refreshButton.style.visibility = 'visible';
   }
 
   if (leaderboardScores.result.length) {
@@ -37,12 +44,7 @@ const getScores = async () => {
           <small>${score.score}</small>
         </li>`;
     });
-  } else {
-    scoreListContainer.innerHTML += "<h5 style='text-align: center; text-decoration: underline; cursor: wait'>Please add a score</h5>";
-  }
-  refreshButton.style.visibility = 'visible';
-  console.log(document.readyState);
-  if (document.readyState === 'complete') {
+
     const notyf = new Notyf({
       position: {
         x: 'right',
@@ -56,7 +58,10 @@ const getScores = async () => {
       ],
     });
     notyf.success('Leaderboard updated!');
+  } else {
+    scoreListContainer.innerHTML += "<h5 style='text-align: center; text-decoration: underline; cursor: wait'>Please add a score</h5>";
   }
+  refreshButton.style.visibility = 'visible';
 };
 
 export default getScores;
