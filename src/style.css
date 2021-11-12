@@ -1,6 +1,5 @@
 body {
   min-height: 450px;
-  height: 100vh;
   margin: 0;
   background:
     radial-gradient(
@@ -10,6 +9,12 @@ body {
     );
   color: #fff;
   font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (min-width: 645px) {
+  body {
+    height: 100vh;
+  }
 }
 
 .main_title {
