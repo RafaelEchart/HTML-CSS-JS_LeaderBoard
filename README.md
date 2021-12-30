@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://rafaelechart.github.io/Leaderboard/dist/)
+[Live Demo Link](https://rafaelechart.github.io/HTML-CSS-JS_LeaderBoard/dist/)
 
 
 ## Getting Started
@@ -34,7 +34,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- git clone https://github.com/RafaelEchart/Leaderboard.git
+- git clone https://github.com/RafaelEchart/HTML-CSS-JS_LeaderBoard.git
 - cd Leaderboard
 
 ### Install
